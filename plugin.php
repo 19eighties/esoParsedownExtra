@@ -76,14 +76,14 @@ class ETPlugin_esoParsedownExtra extends ETPlugin
 		$this->PDETFormat->content = str_replace("\\\"", "\"", $this->PDETFormat->content);
 
 		$this->PDETFormat->content = preg_replace_callback(
-			'#\<code (.*?)\>(.+?)\<\/code\>#s',function($m)
-				{
-					//remove link-member link in code view
-					$code = preg_replace("#\<a href='(.*?)' class='link-member'\>(.*?)</a\>#s","$2",$m[2]);
-					//fixed html format
-					$code = str_replace("&amp;","&",$code);
-					return  "<code ".$m[1].">".$code."</code>";
-				},$this->PDETFormat->content);
+			'#\<code(.*?)\>(.+?)\<\/code\>#s',function($m)
+			{
+				//remove link-member link in code view
+				$code = preg_replace("#\<a href='(.*?)' class='link-member'\>(.*?)</a\>#s","$2",$m[2]);
+				//fixed html format
+				$code = str_replace("&amp;","&",$code);
+				return  "<code ".$m[1].">".$code."</code>";
+			},$this->PDETFormat->content);
 
 		$sender->content = $this->PDETFormat->content;
 	}
