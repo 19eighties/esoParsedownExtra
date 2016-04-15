@@ -8,7 +8,7 @@ It is working but was not tested with other plugins, feedback is welcome.
 
 ### 1. First method, getting the master .zip file
 
-1. Download the file https://github.com/kassius/esoParsedownExtra/archive/master.zip
+1. Download the file https://github.com/19eighties/esoParsedownExtra/master.zip
 2. Extract it to your [esoTalk instalation directory]/addons/plugins/
   * Then you should have the directory [your root install]/addons/plugins/esoParsedownExtra/
 4. Go to 'administration' on the site, then to 'Plugins' and enable 'esoMarkdownExtra' plugin.
